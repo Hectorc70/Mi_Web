@@ -14,48 +14,28 @@
 </head>
 
 <body>
-    <header>
-        <div class="btn-hamburguesa">
-            <div class="linea"></div>
-            <div class="linea"></div>
-            <div class="linea"></div>
-        </div>
-    </header>
+    <div id="contenedor">
+        <header>
+            <nav id="navegacion">
+                <ul class="opciones">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Proyectos</a></li>                    
+                </ul>
+                <ul class="opciones op-2">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Proyectos</a></li>                    
+                </ul>
+            </nav>
 
-    <section>
-        <div class="conte-proyecto">
-            <div class="tarjeta conte-descrip">
-                <div class="nombre">
-                    <h3>titulo</h3>
-                </div>
-                <div class="contenido">
-                    <div class="descripcion">
-                        <p>
-                            Lorem Ipsum es simplemente texto de relleno de la industria de la impresión y la composición
-                            tipográfica. Lorem Ipsum ha sido el texto de relleno estándar de la industria desde la
-                            década de
-                            1500, cuando un impresor desconocido tomó una galera de tipos y la mezcló para hacer un
-                            libro de
-                            muestras tipográfico. Ha sobrevivido no solo a cinco siglos, sino también al salto a la
-                            composición tipográfica electrónica, permaneciendo esencialmente sin cambios. Se popularizó
-                            en
-                            la década de 1960 con el lanzamiento de hojas de Letraset que contienen pasajes de Lorem
-                            Ipsum
-                            y, más recientemente, con software de autoedición como Aldus PageMaker que incluye versiones
-                            de
-                            Lorem Ipsu
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="tarjeta conte-imgs">                 
-                    <div class="imgs-proyecto">
-                        {% load static %}<img src="{% static 'img/img1.jpg' %}" alt="editar" />
-                    </div>
-            </div>
-        </div>
-    </section>
+        </header>
 
+
+        <section>
+            <div class="conte-proyectos">
+
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
