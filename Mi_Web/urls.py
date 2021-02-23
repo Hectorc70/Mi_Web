@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from portafolio.views import mostrar_inicio
+from portafolio.views import projects_view
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', mostrar_inicio,name='inicio' ),
-]
+    path('', projects_view, name='inicio' ),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
