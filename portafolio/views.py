@@ -7,19 +7,13 @@ from portafolio.models import Project, Picture
 
 
 def projects_view(request):
-    
+    last_picture = dict()
+
     projects = Project.objects.all()
-    for project in projects:
 
-        
-        img = Picture.objects.filter(project = project.id_project)
-        print(img)
-    imgs = Picture.objects.all()[1]
-
-
+    
 
 
     
 
-    return render (request, 'index.html', {'projects': projects,
-                                            'imgs':imgs})
+    return render (request, 'index.html', {'projects': projects})
