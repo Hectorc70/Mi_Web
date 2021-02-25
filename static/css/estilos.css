@@ -254,6 +254,45 @@ section{
 
 }
 
+
+
+
+/* 
+.proyect-descripcion{
+    display: block;
+    width: 50%;
+    height: 300px;
+    background-color: #292929;        
+
+    Oswald',Helvetica,Arial,Lucida,sans-serif; Titulo
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    
+    text-align: justify;
+     */
+} 
+
+/* .proyecto h3{
+    width: 35%;
+    
+    float: right;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #35ba8d;
+} */
+
+/* .proyect-descripcion p{
+    width: 30%;
+    font-family: 'Syne', sans-serif;
+    color: white;
+}
+
+ */
 footer{
     display: block;
     width: 100%;
