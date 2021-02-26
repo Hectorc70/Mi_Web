@@ -23,9 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'wdo9xrr+oh()+(b4o+jhb=1y(x)oe#0&3#27w4w&btl6&ypt59'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = ['https://portafolioappdev.herokuapp.com']
 
 
 # Application definition
@@ -74,9 +72,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Mi_Web.wsgi.application'
-
-
-
 
 
 # Password validation

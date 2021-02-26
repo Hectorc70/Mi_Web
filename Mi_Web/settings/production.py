@@ -1,0 +1,23 @@
+from .base import *
+
+
+
+DEBUG = False
+
+ALLOWED_HOSTS = ['https://portafolioappdev.herokuapp.com']
+
+
+# Database
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'my_web',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'TIME_ZONE': 'UTC',
+    }
+}
