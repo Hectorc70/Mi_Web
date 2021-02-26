@@ -23,7 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'wdo9xrr+oh()+(b4o+jhb=1y(x)oe#0&3#27w4w&btl6&ypt59'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
+ALLOWED_HOSTS = ['webpersonalport.herokuapp.com']
 
 
 # Application definition
@@ -72,6 +74,22 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Mi_Web.wsgi.application'
+
+
+# Database
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'my_web',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'TIME_ZONE': 'UTC',
+    }
+}
 
 
 # Password validation
