@@ -4,7 +4,7 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://portafolioappdev.herokuapp.com']
+ALLOWED_HOSTS = ['portafolioappdev.herokuapp.com']
 
 
 # Database
