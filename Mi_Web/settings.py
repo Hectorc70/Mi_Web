@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import configparser
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -78,16 +80,19 @@ WSGI_APPLICATION = 'Mi_Web.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+config = configparser.ConfigParser()
+config.read('config.ini')
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'my_web',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
-        'TIME_ZONE': 'UTC',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config['PRODUCCION']['DB_NAME'],
+        'HOST': config['PRODUCCION']['DB_HOST'],
+        'PORT': config['PRODUCCION']['DB_PORT'],      
+        'USER': config['PRODUCCION']['DB_USER'],
+        'PASSWORD': config['PRODUCCION']['DB_PASSWORD'],
+        
+        
+
     }
 }
 
