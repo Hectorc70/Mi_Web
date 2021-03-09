@@ -92,6 +92,22 @@ DATABASES = {
     
 }
 
+""" import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+DATABASES = {
+        'default': {
+            'ENGINE':'django.db.backends.postgresql',
+            'NAME':config['TEST']['DB_NAME'],
+            'USER':config['TEST']['DB_USER'],
+            'PASSWORD': config['TEST']['DB_PASSWORD'],
+            'HOST': config['TEST']['DB_HOST'],
+            'PORT': config['TEST']['DB_PORT'],
+        }
+} """
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
