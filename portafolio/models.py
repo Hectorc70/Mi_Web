@@ -8,7 +8,7 @@ class Project(models.Model):
                                     auto_created=True, unique=True) 
     name         = models.CharField('Nombre de Proyecto', max_length=300)
     description  = models.TextField('Descripcion del Proyecto')
-    picture_head = models.ImageField(upload_to='pictures/head')
+    picture_head = models.TextField('Imagen', max_length=500)
 
     def __str__(self):
         return self.name
