@@ -13,6 +13,7 @@ dj-database-url==0.5.0
 Django==3.0.2
 django-debug-toolbar==2.2
 django-excel==0.0.10
+djangorestframework==3.12.2
 easygui==0.98.1
 Eel==0.13.2
 et-xmlfile==1.0.1
@@ -77,6 +78,7 @@ typed-ast==1.4.0
 virtualenv==16.7.9
 Werkzeug==1.0.1
 whichcraft==0.6.1
+whitenoise==5.2.0
 wrapt==1.11.2
 zipp==3.0.0
 zope.event==4.4

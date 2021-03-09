@@ -11,9 +11,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import configparser
 
 
+
+import dj_database_url
+from decouple import config
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'wdo9xrr+oh()+(b4o+jhb=1y(x)oe#0&3#27w4w&btl6&ypt59'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['miwebp.herokuapp.com',  '127.0.0.1']
 
@@ -54,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Mi_Web.urls'
@@ -80,20 +83,13 @@ WSGI_APPLICATION = 'Mi_Web.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-config = configparser.ConfigParser()
-config.read('config.ini')
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config['PRODUCCION']['DB_NAME'],
-        'HOST': config['PRODUCCION']['DB_HOST'],
-        'PORT': config['PRODUCCION']['DB_PORT'],      
-        'USER': config['PRODUCCION']['DB_USER'],
-        'PASSWORD': config['PRODUCCION']['DB_PASSWORD'],
-        
-        
 
-    }
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
+
+    
 }
 
 
@@ -139,3 +135,5 @@ STATICFILES_DIRS =(
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
