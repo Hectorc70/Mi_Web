@@ -1,0 +1,22 @@
+@media screen and (max-width: 1024px){
+
+    /*  #conte-img-perfil{
+        left: 30%;
+        margin: 0px auto;
+        
+    }
+    #conte-img-perfil:hover > #conte-descripcion {
+        display: block;
+    } */
+    #conte-descripcion{
+        
+    }
+
+    .img
+    {
+        width: 100%;
+    }
+    .descripcion{
+        width: 100%;
+    }
+} 
