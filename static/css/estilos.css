@@ -1,6 +1,12 @@
 /* FUENTES */
 
-
+.no-mostrar{
+    display: none;
+    visibility: hidden;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}   
 
 
 *{
@@ -46,13 +52,16 @@ hr{
 #conte-principal{
     position: relative;
     display: block;
-    width: 100%;
+    max-width:  100%;
     margin: 0 auto;
 }
+
+
 header{
     position: relative;
     display: block;
     height: 300px;
+    max-width: 100%;
     background-image: url('../img/back1.jpg');
     text-align: center;
     padding: 10px;
@@ -63,10 +72,10 @@ header{
 
 #conte-img-perfil{
     display: block;
-    position: absolute;
+    float: left;
+    margin-left: 200px; 
     top: 50px;
-    left: 180px;
-    width: 300px;
+    max-width: 300px;
     height: 400px;
     padding: 5px;
     border:  solid 2px #afe2d1;
@@ -75,9 +84,11 @@ header{
 
 #conte-descripcion{
     display: block;
-    position: absolute;
+    float: left;
+    position: relative;
+    z-index: 2;    
     top: 150px;
-    left: 450px;
+    left: -40px;
     background: #262525;    
     width: 350px;
     height: 200px;
@@ -107,7 +118,7 @@ h2{
 }
 
 .btn-descarga-cv{
-    position: absolute;
+    position: relative;
     right: 100px;
     top: 150px;
     background-color: #292929;
@@ -145,7 +156,7 @@ h2{
 
 .logo-link{
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     border-radius: 50%;
     
@@ -158,12 +169,92 @@ h2{
     background-color: #292929;
 }
 
+
+/* SIDEBAR  */
+
+#side-bar{
+    display: block;
+    width: 34px;
+    height:25px;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.bar{
+    width: 100%;
+    height: 5px;
+    margin-bottom: 3px;
+    background-color: #292929;
+    border: 1px solid #35ba8d;
+    border-radius: .5em;
+
+}
+#side-bar:hover .bar{
+    background-color: #00b0cf;
+    cursor: pointer;
+    
+}
+#menu-side-bar{
+    display:inline-block;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    z-index: 2;
+    width: 300px;
+    background-color: #292929;
+    height: 1000px;
+}
+
+.conte-btn-cerrar{
+    display: block;
+    width: 100%;
+    height: 20px;    
+    margin-bottom: 10px;
+    background-color: #afe2d1;
+}
+
+.btn-cerrar{
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-cerrar:hover{
+    background-color: #bb4e42;
+    cursor:pointer;
+}
+
+.opcion{
+    clear: both;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    height: 30px;
+    
+}
+
+
+.opcion:hover{
+    background-color: #35ba8d;
+    border-bottom: 2px solid white;
+}
+
+.bar:nth-child(3){
+    margin-bottom: 0px;
+}
 /* SECCION DE WEB */
 
 section{  
     position: relative;  
     display: block;
     padding-top: 1px;
+    max-width: 100%;
    /*  background-color: #606060; */
 }
 
@@ -171,8 +262,7 @@ section{
 /* Tarjetas */
 .conte-proyectos{
     display: flex;    
-    width: 100%;
-    margin: 0px auto;
+    max-width: 100%;
     flex-direction: row;    
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -295,7 +385,7 @@ section{
  */
 footer{
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: 100px;
     background-image: url('../img/back1.jpg');
 
