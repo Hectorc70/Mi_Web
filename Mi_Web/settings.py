@@ -29,8 +29,8 @@ SECRET_KEY = 'wdo9xrr+oh()+(b4o+jhb=1y(x)oe#0&3#27w4w&btl6&ypt59'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-#ALLOWED_HOSTS = ['miwebp.herokuapp.com',  '127.0.0.1']
-ALLOWED_HOSTS = ['10.1.2.90']
+ALLOWED_HOSTS = ['miwebp.herokuapp.com',  '127.0.0.1']
+#ALLOWED_HOSTS = ['10.1.2.90']
 
 
 # Application definition
