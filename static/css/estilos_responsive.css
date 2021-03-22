@@ -1,22 +1,98 @@
-@media screen and (max-width: 1024px){
-
-    /*  #conte-img-perfil{
-        left: 30%;
-        margin: 0px auto;
-        
-    }
-    #conte-img-perfil:hover > #conte-descripcion {
-        display: block;
-    } */
-    #conte-descripcion{
-        
+@media screen and (max-width: 1232px){
+    #conte-img-perfil{
+        margin-left: 40px;        
     }
 
-    .img
-    {
-        width: 100%;
-    }
-    .descripcion{
-        width: 100%;
+    .btn-descarga-cv{
+        right: 0px;
     }
 } 
+
+
+
+@media screen and (max-width: 930px){
+
+
+        #conte-img-perfil
+        {
+            width: 100%;
+        }
+
+        .btn-descarga-cv{
+            position:  absolute;
+            float: right;
+            top: 100px;
+            margin-right: 30px;
+            
+        }
+        #conte-descripcion{
+            width: 100%;
+            float: none;
+            clear: both;
+            top: 0px;
+            margin: 100px auto;
+            margin-bottom: 50px;
+            padding: 50px;
+        }
+
+        #conte-descripcion p{
+            padding: 30px;
+        }
+        
+        .img{
+            width: 100%;
+        }
+        .descripcion{
+            width: 100%;
+        }
+        .descripcion h3{
+            font-size: 24px;
+            text-align: center;
+        }
+        .descripcion p{
+            width: 90%;
+            padding: 5px;
+            height: 70%;
+            text-align: justify;
+        }
+
+
+        
+}
+    
+
+@media screen and (max-width: 565px){
+
+    #conte-img-perfil
+    {
+        display: block;
+        max-width: 80%;
+        float: none;
+        margin: 0px auto;
+    }
+    #conte-descripcion{
+        display: block;
+        max-width: 90%;
+        margin: 50px auto;
+        margin-bottom: 100px;
+        height: 300px;
+        background-color: #35ba8d;
+    }
+
+    .btn-descarga-cv{
+        display: none;
+        
+    }
+
+    #links{
+        display: none;
+    }
+
+    .conte-proyectos{
+        margin-top: 200px;
+    }
+    hr{ 
+        background-color: #4e4e4e;
+        border: 2px solid #4e4e4e;
+    }
+}

@@ -13,11 +13,19 @@
     padding: 0px;
     margin: 0px;
 }
+html{
+    max-width: 100%;
+}
 body{
-    
+    max-width: 100%;
     background-color: #262525;     
 } 
-
+#conte-principal{
+    position: relative;
+    display: block;
+    max-width:  100%;
+    margin: 0 auto;
+}
 hr{ 
     background-color: #35ba8d;
     border: 2px solid #35ba8d;
@@ -49,12 +57,7 @@ hr{
     bottom: 10px;
     right: 10px;
 }
-#conte-principal{
-    position: relative;
-    display: block;
-    max-width:  100%;
-    margin: 0 auto;
-}
+
 
 
 header{
@@ -319,9 +322,8 @@ section{
     background-color: #35ba8d;
 }
 .descripcion h3{
-    margin: 20px;
-    margin-left: 150px;
-    margin-right: 150px;
+    width: 80%;
+    margin: 10px auto;
     font-family:  'Oswald',Helvetica,Arial,Lucida,sans-serif; Titulo;
     color: white;
     text-transform: uppercase;
@@ -331,62 +333,14 @@ section{
 }
 
 .descripcion p{
-    width: 50%;
-    height: 200px;
-    margin: 20px;
-    margin-left: 150px;
-    margin-right: 150px;
+    width:80%;
+    margin: 10px auto;
+    padding: 50px;    
     font-family: sans-serif;
     color: white;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: .9rem;
     letter-spacing:1px;
-
 }
 
 
-
-
-/* 
-.proyect-descripcion{
-    display: block;
-    width: 50%;
-    height: 300px;
-    background-color: #292929;        
-
-    Oswald',Helvetica,Arial,Lucida,sans-serif; Titulo
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    
-    text-align: justify;
-     */
-} 
-
-/* .proyecto h3{
-    width: 35%;
-    
-    float: right;
-    font-size: 18px;
-    font-family: sans-serif;
-    text-align: center;
-    padding-right: 15px;
-    margin-top: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #35ba8d;
-} */
-
-/* .proyect-descripcion p{
-    width: 30%;
-    font-family: 'Syne', sans-serif;
-    color: white;
-}
-
- */
-footer{
-    display: block;
-    max-width: 100%;
-    height: 100px;
-    background-image: url('../img/back1.jpg');
-
-}

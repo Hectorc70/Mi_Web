@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
@@ -44,11 +44,12 @@
                     <a class="opcion" href="">Github</a>
                 </div>
             </a> -->
+            {% for p in profile %}
             <div id="conte-img-perfil">
-                {% load static %}<img src="{% static 'img/perfil.png' %}" alt="editar" width="100%" height="100%" />
+                {% load static %}<img src="{{p.photo_profile}}" alt="editar" width="100%" height="100%" />
             </div>
             <div id="conte-descripcion">
-                <h1> Hector Garcia Nieves</h1>
+                <h1> {{p.name}}</h1>
                 <h2> Desarrollador Web</h2>
                 <hr>
                 <p>
@@ -66,9 +67,9 @@
             </div>
             <div id="cv-descarga">
                 <a class="btn btn-descarga-cv" target="blanck"
-                    href="https://drive.google.com/file/d/1YdM_K3OT0zOcjcp_ZKUUA06_nOv6W-Jz/view?usp=sharing">DESCARGAR CV</a>
+                    href="{{p.link_cv}}">DESCARGAR CV</a>
             </div>
-
+            {% endfor %}
             <div id="links">
 
                 <a class="link" href="https://github.com/Hectorc70" target="blanck">
@@ -142,7 +143,7 @@
                 <div class="img">
                     <img src="{{project.picture_head}} " height="100%" width="100%">
 
-                    <button class="btn-circulo-mas" href="">+</button>
+                    <!--<button class="btn-circulo-mas" href="">+</button> -->
 
                 </div>
 
